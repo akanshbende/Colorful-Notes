@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Mono&family=Rubik:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  height: 100vh;
+  /* overflow-y: hidden; */
+  display: flex;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+/* Custom Schroll Bar */
+
+.custom-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background-color: lightgray;
+  /* transition: 300ms; */
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: gray;
+}
+
+/* Custom Schroll Bar Ends */
+
+.note {
+  padding: 1rem;
+  height: 280px;
+  /* max-width: 260px; */
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  border-radius: 1rem;
+}
+.note:hover .note-footer img {
+  opacity: 1;
+}
+
+.note-title {
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 1.5rem;
+  resize: none;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.heading {
+  margin-left: 1rem;
+}
+
+/* .note-header .note-deleteAll {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+} */
+
+.note-deleteAll {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 40px;
+  min-width: 0;
+  outline: none;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 8rem;
+  will-change: transform;
+}
+
+.note-deleteAll:disabled {
+  pointer-events: none;
+}
+
+.note-deleteAll:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.note-deleteAll:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+.note-text {
+  flex: 1;
+  resize: none;
+  background-color: transparent;
+  font-size: 1.2rem;
+  /* margin: 0.5rem; */
+  line-height: 1.875rem;
+  outline: none;
+  border: none;
+}
+.note-time {
+  font-family: "Poppins";
+  letter-spacing: 1px;
+  /* font-weight: 500; */
+}
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.note-footer img {
+  width: 25px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 500ms;
+}
+
+/* Style to Single Note  Ends*/
+
+/* Style to Note Container */
+.note-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 100%; */
+  /* padding: 1rem; */
+  width: 100%;
+  gap: 20px;
+  margin: 1rem;
+  /* align-items: center;
+  justify-content: space-between; */
+  /* gap: auto; */
+  /* overflow: none; */
+}
+.note-container h3 {
+  font-size: 2rem;
+  font-family: "Roboto Mono";
+}
+.note-header {
+  display: flex;
+  flex-wrap: wrap;
+  /* height: 50px; */
+  /* line-height: 60px; */
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+
+  /* position: inherit; */
+}
+.note-conatainer-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center;
+  justify-content: center; */
+  /* height: ; */
+  /* margin-top: 1.5rem;
+  margin-left: 2.5rem; */
+  padding: 15px 10px;
+  width: 100%;
+  height: 75%;
+  gap: 10px;
+  /* height: 100vh; */
+  overflow-y: scroll;
+}
+
+.note-search {
+  width: 65%;
+  background-color: #c8c7c7;
+  /* line-height: 20px; */
+  border-radius: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* max-width: 400px; */
+}
+.note-search input {
+  background-color: transparent;
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  color: #454343;
+  height: 100%;
+
+  /* border-radius: 10px; */
+}
+/* Style to Note Container Ends here */
+
+/*Sidebar */
+.sidebar {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.sidebar-heading {
+  font-family: "poppins";
+  color: #3b3b3b;
+  font-weight: 600;
+}
+.sidebar img {
+  width: 50px;
+  cursor: pointer;
+}
+
+.sidebar-color-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  transition: 500ms ease;
+  /* for toggle  */
+  height: 0;
+}
+.sidebar-color-list-active {
+  height: 300px;
+}
+.sidebar-color-list-item {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  list-style: none;
+  cursor: pointer;
+}
+
+.no-notes {
+  /* width: 80%; */
+  /* padding: 0 auto; */
+  margin: 0px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.no-notes img {
+  width: 250px;
+  height: auto;
+}
+/*Sidebar Ends here */
+
+@media screen and (max-width: 400px) {
+  .note-footer img {
+    opacity: 1;
+  }
+  .note-search {
+    width: 78%;
+    gap: 10px;
+  }
+}
